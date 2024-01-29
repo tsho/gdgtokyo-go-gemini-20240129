@@ -32,7 +32,7 @@ go get github.com/google/generative-ai-go
 go mod init example.com/$(basename `pwd`)
 ```
 
-## 01_initialize_model
+## 01_initialize_modelの出力結果例
 ```
 &{0xc000305ba0 models/gemini-pro {<nil> [] <nil> <nil> <nil> <nil>} []}
 ```
