@@ -27,9 +27,14 @@ go get github.com/google/generative-ai-go
 
 
 ## 各フォルダの初回設定
-初回実行例
+1. modの初期化
 ```
 go mod init example.com/$(basename `pwd`)
+```
+
+2. go mod tidyの実行
+```
+go mod tidy
 ```
 
 ## 01_initialize_modelの出力結果例
