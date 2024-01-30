@@ -25,22 +25,55 @@ go get github.com/google/generative-ai-go
 ```
 [引用元](https://ai.google.dev/tutorials/go_quickstart?hl=ja#add-sdk)
 
+## 各フォルダの分け方
+勝手ながら下記の4つに分けました。
+
+- 0 [この勉強会で使う共通モジュールの作成](https://www.youtube.com/watch?v=3ZomyM0expM&t=20m46s)
+- 1 [モデルの初期化](https://www.youtube.com/watch?v=3ZomyM0expM&t=25m40s)
+- 2 [テキストのみの入力からテキストを生成する](https://www.youtube.com/watch?v=3ZomyM0expM&t=36m35s)
+- 3 [テキストと画像の入力からテキスト生成(マルチモーダル)](https://www.youtube.com/watch?v=3ZomyM0expM&t=45m16s)
+
+
 
 ## 各フォルダの初回設定
-1. modの初期化
-```
-go mod init example.com/$(basename `pwd`)
-```
-
-2. go mod tidyの実行
+1. go mod tidyの実行
 ```
 go mod tidy
+```
+
+2. 実行
+```
+go run .
+```
+
+* 3のmutlmodalは画像をこちらのgithubからダウンロードする
+[hi.pngとangry.png](https://github.com/tenntenn/gopher-stickers/tree/master/png)
+
+
+### もし自分で新しいフォルダを作った場合
+
+modの初期化
+```
+go mod init example.com/$(basename `pwd`)
 ```
 
 ## 01_initialize_modelの出力結果例
 ```
 &{0xc000305ba0 models/gemini-pro {<nil> [] <nil> <nil> <nil> <nil>} []}
 ```
+
+## 02_generate_textの出力結果例
+```
+Goのマスコットキャラクターは「Gopher(ゴファー)」です。Gopherは、穴を掘って暮らす哺乳類の一種、....
+```
+* 生成AIは同じ結果がでることを保証しないので出力結果は異なる可能性があります。
+
+## 03_multimodal_text_imagesの出力結果例
+```
+
+```
+* 生成AIは同じ結果がでることを保証しないので出力結果は異なる可能性があります。
+
 
 ## 参考
 GoのSDKのドキュメント[リンク](https://pkg.go.dev/github.com/google/generative-ai-go#section-readme)
